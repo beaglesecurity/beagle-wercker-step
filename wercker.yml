@@ -3,12 +3,12 @@ build:
    steps:
      - shellcheck:
         files: run.sh
-     - ytet5uy4/apk-add@0.1.2:
-        packages: curl
      - script:
         name: prepare output
         code: rm -rf $WERCKER_ROOT/.git
 publish:
   steps:
+    - ytet5uy4/apk-add@0.1.2:
+      packages: curl
     - internal/publish-step:
       owner: BeagleSecurity 
