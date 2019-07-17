@@ -1,0 +1,9 @@
+box: beaglesecurity/beagle-test-trigger-common
+build:
+  steps:
+    - script:
+      code: trigger-test
+publish:
+  steps:
+    - internal/publish-step:
+        owner: beagle
