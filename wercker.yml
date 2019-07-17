@@ -3,6 +3,8 @@ build:
    steps:
      - shellcheck:
         files: run.sh
+     - install-packages:
+        packages: curl
      - script:
         name: prepare output
         code: rm -rf $WERCKER_ROOT/.git
