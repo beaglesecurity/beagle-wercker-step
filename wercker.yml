@@ -1,10 +1,14 @@
 box: beaglesecurity/beagle-gitlab-pipeline
 build:
-  steps:
-    - script:
-      code: trigger-test
+   steps:
+     - shellcheck:
+        files: run.sh
+     - script:
+        name: prepare output
+        code: rm -rf $WERCKER_ROOT/.git
 publish:
   steps:
+    - ytet5uy4/apk-add@0.1.2:
+      packages: curl
     - internal/publish-step:
-        owner: beaglesecurity
-       
+      owner: BeagleSecurity 
