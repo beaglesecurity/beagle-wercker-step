@@ -80,4 +80,10 @@ beagle-trigger:
 * You can add this to your work flow, or your can trigger this after your build from `Actions`
 ![actions](/images/3.png)
 
+# Authors
 
+* **Beagle Security**
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
