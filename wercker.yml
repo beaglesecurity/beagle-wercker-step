@@ -2,13 +2,13 @@ box: beaglesecurity/beagle-wercker-step
 build:
    steps:
      - shellcheck:
-       files: run.sh
+     files: run.sh
      - script:
-       name: prepare output
-       code: rm -rf $WERCKER_ROOT/.git
+     name: prepare output
+     code: rm -rf $WERCKER_ROOT/.git
 publish:
   steps:
     - install-packages:
-        packages: ca-certificates
+    packages: ca-certificates
     - internal/publish-step:
-        owner: BeagleSecurity 
+    owner: BeagleSecurity 
