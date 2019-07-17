@@ -1,4 +1,4 @@
-box: beaglesecurity/beagle-wercker-step
+box: beaglesecurity/beagle-gitlab-pipeline
 build:
   steps:
     - script:
@@ -10,5 +10,5 @@ publish:
 deploy:
     steps:
     - internal/publish-step:
-        owner: beaglesecurit
+        owner: beaglesecurity
        
