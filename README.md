@@ -30,11 +30,17 @@ In short, Beagle finds out how deep your system can be penetrated. Know it befor
 2. Navigate to `Environment`
 3. Add the environment variables `USER_TOKEN` and `APPLICATION_TOKEN`, Check `Protected`(Recommended).
 	* Ensure that the variable names are named as follows : `USER_TOKEN`, `APPLICATION_TOKEN`
+![environment](/images/1.png)
 
 ## Specifying the Variables in steps
+```yaml
+steps:
+  - beaglesecurity/beagle-security@x.x.x:
+      USER_TOKEN:        <string> 
+      APPLICATION_TOKEN: <string> 
+```
 * For `USER_TOKEN` Replace `<string>` with `$USER_TOKEN`
 * For `APPLICATION_TOKEN` Replace `<string>` with `$APPLICATION_TOKEN`
-![environment](/images/1.png)
 * For Security Reasons it is always recommended to set tokens in your project environment. Never pass tokens as plaintext through steps!!
 
 ## Install curl
@@ -48,32 +54,32 @@ In order to use this step you've have to install `curl` in your `box`. If alread
 ```yaml
 box: ubuntu
 build:
-	steps:
-	    - install-packages:
-	        packages: curl
+ steps:
+  - install-packages:
+   packages: curl
 ```
 
 ## Full Example
 ```yaml
 box: ubuntu
 build:
-	steps:
-	    - install-packages:
-	        packages: curl
-	    - beaglesecurity/beagle-security:
-	        USER_TOKEN: $USER_TOKEN 
-	        APPLICATION_TOKEN: $APPLICATION_TOKEN
+ steps:
+  - install-packages:
+   packages: curl
+  - beaglesecurity/beagle-security:
+   USER_TOKEN: $USER_TOKEN 
+   APPLICATION_TOKEN: $APPLICATION_TOKEN
 ``` 
 ## Notes
 If you want to create a new pipline for beagle test trigger. Add the following snippet to your `wercker.yml` file.
 ```yaml
 beagle-trigger:
-	steps:
-	    - install-packages:
-	        packages: curl
-	    - beaglesecurity/beagle-security:
-	        USER_TOKEN: $USER_TOKEN 
-	        APPLICATION_TOKEN: $APPLICATION_TOKEN
+ steps:
+  - install-packages:
+   packages: curl
+  - beaglesecurity/beagle-security:
+   USER_TOKEN: $USER_TOKEN 
+   APPLICATION_TOKEN: $APPLICATION_TOKEN
 ``` 
 * Create a new pipline from `workflow`. configure as follows
 ![pipline](/images/2.png)
