@@ -5,9 +5,9 @@ tags:
  - security
  - pentest
 properties:
-- name: USER_TOKEN
- type: string
- required: true
-- name: APPLICATION_TOKEN
- type: string
- required: true
+ - name: USER_TOKEN
+  type: string
+  required: true
+ - name: APPLICATION_TOKEN
+  type: string
+  required: true
