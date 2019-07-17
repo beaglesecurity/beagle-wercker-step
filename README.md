@@ -48,7 +48,7 @@ In order to use this step you've have to install `curl` in your `box`. If alread
 * For installing `curl`, for debian based `box` add the following snippet to your `wercker.yml` file's `steps:` of `yaml-pipeline-name:` section. 
 ```yaml
 - install-packeges:
-	packages: curl
+ packages: curl
 ```
 * An example will look like this, my `yaml-pipeline-name` is `build`
 ```yaml
