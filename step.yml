@@ -1,5 +1,5 @@
 name: beagle-security
-version: 1.3.0
+version: 1.4.0
 summary: This plugin will trigger Beagle security test
 tags:
  - security
@@ -10,8 +10,10 @@ properties:
  name: USER_TOKEN
  type: string
  required: true
+ default: $USER_TOKEN
 
 -
  name: APPLICATION_TOKEN
  type: string
  required: true
+ default: $USER_TOKEN
