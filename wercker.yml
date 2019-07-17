@@ -1,4 +1,4 @@
-box: beaglesecurity/beagle-test-trigger-common
+box: beaglesecurity/beagle-wercker-step
 build:
   steps:
     - script:
