@@ -1,9 +1,11 @@
 box: beaglesecurity/beagle-wercker-step
 build:
-  steps:
-    - script:
-      name: Trigger Beagle penetration testing
-      code: trigger-test
+   steps:
+     - shellcheck:
+       files: run.sh
+     - script:
+       name: prepare output
+       code: rm -rf $WERCKER_ROOT/.git
 publish:
   steps:
     - install-packages:
