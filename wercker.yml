@@ -3,7 +3,7 @@ build:
    steps:
      - shellcheck:
         files: run.sh
-     - install-packages:
+     - ytet5uy4/apk-add@0.1.2:
         packages: curl
      - script:
         name: prepare output
