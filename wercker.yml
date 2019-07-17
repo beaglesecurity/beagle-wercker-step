@@ -2,8 +2,11 @@ box: beaglesecurity/beagle-wercker-step
 build:
   steps:
     - script:
+      name: Trigger Beagle penetration testing
       code: trigger-test
 publish:
   steps:
+    - install-packages:
+        packages: ca-certificates
     - internal/publish-step:
         owner: BeagleSecurity 
