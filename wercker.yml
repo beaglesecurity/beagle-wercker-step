@@ -6,4 +6,9 @@ build:
 publish:
   steps:
     - internal/publish-step:
-        owner: beagle
+        owner: beaglesecurity
+deploy:
+    steps:
+    - internal/publish-step:
+        owner: beaglesecurit
+       
