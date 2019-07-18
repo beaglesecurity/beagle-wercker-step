@@ -1,4 +1,4 @@
-box: beaglesecurity/beagle-wercker-step
+box: beaglesecurity/beagle-gitlab-pipeline
 build:
    steps:
      - shellcheck:
