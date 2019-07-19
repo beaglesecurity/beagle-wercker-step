@@ -7,13 +7,13 @@ tags:
 
 properties:
 -
- name: USER_TOKEN
+ name: ACCESS_TOKEN
  type: string
  required: true
- default: $USER_TOKEN
+ default: $ACCESS_TOKEN
 
 -
  name: APPLICATION_TOKEN
  type: string
  required: true
- default: $USER_TOKEN
+ default: $ACCESS_TOKEN
