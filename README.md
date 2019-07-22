@@ -3,8 +3,8 @@ To trigger Beagle penetration testing from Wercker
 
 ## Prerequisites
 
-* Obtain Application Token and User Token from Beagle Dashboard
-* Add the Environment variables `USER_TOKEN` and `APPLICATION_TOKEN` to Wercker Project. 
+* Obtain Application Token and Access Token from Beagle Dashboard
+* Add the Environment variables `ACCESS_TOKEN` and `APPLICATION_TOKEN` to Wercker Project. 
 
 ### What is Beagle?
 
@@ -14,7 +14,7 @@ In short, Beagle finds out how deep your system can be penetrated. Know it befor
 
 * [Beagle Security](https://beaglesecurity.com/) - Visit for more Details!
 
-### Generate your User Token From Beagle User Settings:
+### Generate your Access Token From Beagle User Settings:
   Settings -> Access token -> Generate your new personal access token
 
 ![Generate user token](https://beagle-assets.s3.ca-central-1.amazonaws.com/share/usertoken.png)
@@ -28,18 +28,18 @@ In short, Beagle finds out how deep your system can be penetrated. Know it befor
 
 1. Open your Wercker project
 2. Navigate to `Environment`
-3. Add the environment variables `USER_TOKEN` and `APPLICATION_TOKEN`, Check `Protected`(Recommended).
-	* Ensure that the variable names are named as follows : `USER_TOKEN`, `APPLICATION_TOKEN`
+3. Add the environment variables `ACCESS_TOKEN` and `APPLICATION_TOKEN`, Check `Protected`(Recommended).
+	* Ensure that the variable names are named as follows : `ACCESS_TOKEN`, `APPLICATION_TOKEN`
 ![environment](/images/1.png)
 
 ## Specifying the Variables in steps
 ```yaml
 steps:
   - beaglesecurity/beagle-security@x.x.x:
-      USER_TOKEN:        <string> 
+      ACCESS_TOKEN:        <string> 
       APPLICATION_TOKEN: <string> 
 ```
-* For `USER_TOKEN` Replace `<string>` with `$USER_TOKEN`
+* For `ACCESS_TOKEN` Replace `<string>` with `$ACCESS_TOKEN`
 * For `APPLICATION_TOKEN` Replace `<string>` with `$APPLICATION_TOKEN`
 * For Security Reasons it is always recommended to set tokens in your project environment. Never pass tokens as plaintext through steps!!
 
@@ -67,7 +67,7 @@ build:
   - install-packages:
    packages: curl
   - beaglesecurity/beagle-security:
-   USER_TOKEN: $USER_TOKEN 
+   ACCESS_TOKEN: $ACCESS_TOKEN 
    APPLICATION_TOKEN: $APPLICATION_TOKEN
 ``` 
 ## Notes
@@ -78,7 +78,7 @@ beagle-trigger:
   - install-packages:
    packages: curl
   - beaglesecurity/beagle-security:
-   USER_TOKEN: $USER_TOKEN 
+   ACCESS_TOKEN: $ACCESS_TOKEN 
    APPLICATION_TOKEN: $APPLICATION_TOKEN
 ``` 
 * Create a new pipline from `workflow`. configure as follows

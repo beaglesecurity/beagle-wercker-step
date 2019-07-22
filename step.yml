@@ -16,4 +16,4 @@ properties:
  name: APPLICATION_TOKEN
  type: string
  required: true
- default: $ACCESS_TOKEN
+ default: $APPLICATION_TOKEN
