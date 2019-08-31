@@ -19,7 +19,7 @@ In short, Beagle finds out how deep your system can be penetrated. Know it befor
 
 ![Generate user token](https://beagle-assets.s3.ca-central-1.amazonaws.com/share/usertoken.png)
 
-### Generate your Application Token From Beagle<br></h3>
+### Generate your Application Token From Beagle
   Home -> Applications -> Select your application -> Settings -> Application token
 
 ![Get application token](https://beagle-assets.s3.ca-central-1.amazonaws.com/share/apptoken.png)
